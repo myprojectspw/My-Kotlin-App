@@ -1,5 +1,6 @@
 package com.example.myktolinapp
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -33,6 +34,13 @@ class MainActivity : AppCompatActivity() {
             //change text on clicked
             myTxt.text = "Text is change..." + counter++;
         }
+
+        val button = findViewById<Button>(R.id.button)
+        button.setOnClickListener {
+            val intent = Intent(this, Products::class.java)
+            startActivity(intent)
+        }
+
     }
 
 
